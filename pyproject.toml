@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "benchmark-fragility"
+version = "0.1.0"
+description = "Deterministic fragility diagnostics for ML benchmark leaderboards (win rate, Cohen's d, breakdown point)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "YongKyung Oh", email = "ok19925@gmail.com" },
+]
+keywords = ["benchmark", "leaderboard", "fragility", "reproducibility", "effect-size"]
+classifiers = [
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=1.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/yongkyung-oh/benchmark-fragility"
+Repository = "https://github.com/yongkyung-oh/benchmark-fragility"
+Paper = "https://arxiv.org/abs/2605.17273"
+
+[project.optional-dependencies]
+stats = ["scipy>=1.9"]   # only for the optional Wilcoxon p-value
+test = ["pytest>=7"]
+
+[project.scripts]
+benchmark-fragility = "benchmark_fragility.cli:main"
+fragility = "benchmark_fragility.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

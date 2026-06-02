@@ -1,0 +1,102 @@
+{
+  "ASR": {
+    "consistency": 34.736842,
+    "direction": "lower_better",
+    "fragility": 45.789474,
+    "magnitude": 30.0,
+    "n_models": 20,
+    "n_pairs": 190,
+    "n_tasks": 8,
+    "stability": 32.105263
+  },
+  "LiveBench": {
+    "consistency": 39.473684,
+    "direction": "higher_better",
+    "fragility": 44.210526,
+    "magnitude": 21.578947,
+    "n_models": 20,
+    "n_pairs": 190,
+    "n_tasks": 21,
+    "stability": 35.789474
+  },
+  "MMLU": {
+    "consistency": 33.684211,
+    "direction": "higher_better",
+    "fragility": 39.473684,
+    "magnitude": 23.157895,
+    "n_models": 20,
+    "n_pairs": 190,
+    "n_tasks": 57,
+    "stability": 35.263158
+  },
+  "TSFM_MAE": {
+    "consistency": 46.153846,
+    "direction": "lower_better",
+    "fragility": 61.538462,
+    "magnitude": 28.571429,
+    "n_models": 14,
+    "n_pairs": 91,
+    "n_tasks": 72,
+    "stability": 57.142857
+  },
+  "TSFM_MSE": {
+    "consistency": 60.43956,
+    "direction": "lower_better",
+    "fragility": 74.725275,
+    "magnitude": 54.945055,
+    "n_models": 14,
+    "n_pairs": 91,
+    "n_tasks": 72,
+    "stability": 74.725275
+  },
+  "Tab_B": {
+    "consistency": 37.894737,
+    "direction": "lower_better",
+    "fragility": 61.052632,
+    "magnitude": 27.894737,
+    "n_models": 20,
+    "n_pairs": 190,
+    "n_tasks": 30,
+    "stability": 58.947368
+  },
+  "Tab_M": {
+    "consistency": 41.578947,
+    "direction": "lower_better",
+    "fragility": 58.947368,
+    "magnitude": 43.684211,
+    "n_models": 20,
+    "n_pairs": 190,
+    "n_tasks": 8,
+    "stability": 51.578947
+  },
+  "Tab_R": {
+    "consistency": 46.842105,
+    "direction": "lower_better",
+    "fragility": 58.421053,
+    "magnitude": 3.157895,
+    "n_models": 20,
+    "n_pairs": 190,
+    "n_tasks": 13,
+    "stability": 54.736842
+  },
+  "VBench": {
+    "consistency": 34.210526,
+    "direction": "higher_better",
+    "fragility": 53.684211,
+    "magnitude": 21.578947,
+    "n_models": 20,
+    "n_pairs": 190,
+    "n_tasks": 16,
+    "stability": 47.368421
+  },
+  "VLM": {
+    "consistency": 20.526316,
+    "direction": "higher_better",
+    "fragility": 42.105263,
+    "magnitude": 25.789474,
+    "n_models": 20,
+    "n_pairs": 190,
+    "n_tasks": 29,
+    "stability": 40.526316
+  }
+}
