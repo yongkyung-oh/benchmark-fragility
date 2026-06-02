@@ -13,6 +13,10 @@
 
 > **Part of the [SOTA](https://github.com/yongkyung-oh/SOTA) package** — the standalone metrics library behind *Position: State-of-the-Art Claims Require State-of-the-Art Evidence* ([arXiv:2605.17273](https://arxiv.org/abs/2605.17273)).
 
+**TL;DR:** `benchmark-fragility` checks whether a benchmark leaderboard winner is
+robust across tasks, not just ahead on the mean. It diagnoses top-model pairs
+with effect size, task-level win rate, and breakdown-point stability.
+
 **Companion packages**
 
 | Package | Reproduces |
@@ -22,6 +26,17 @@
 | [`sota-counter`](https://github.com/yongkyung-oh/SOTA/tree/main/sota-counter) | Figure 1 + Appendix A — SOTA mentions |
 
 ---
+
+## Background
+
+Benchmark leaderboards usually rank models by average score, but a mean-score
+lead can be fragile when it is small, inconsistent across tasks, or dependent on
+a small subset of tasks. This package makes those cases explicit by measuring:
+
+- **Magnitude:** whether the top-pair gap is small under Cohen's *d*.
+- **Consistency:** whether the higher-ranked model wins enough tasks.
+- **Stability:** whether the ranking survives task removal under the
+  breakdown-point ratio.
 
 `benchmark-fragility` analyzes a `tasks × models` score matrix. It ranks models
 by mean score, compares the top model pairs, and reports how often the
